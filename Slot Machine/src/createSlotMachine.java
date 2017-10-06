@@ -148,7 +148,7 @@ public class createSlotMachine
 								System.out.print("=");
 							}
 				}
-				} // change
+				} // cha
 				else{
 					for (int c = 0; c < 3; c++)
 						{
