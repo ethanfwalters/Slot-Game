@@ -148,7 +148,7 @@ public class createSlotMachine
 								System.out.print("=");
 							}
 				}
-				}
+				} // change
 				else{
 					for (int c = 0; c < 3; c++)
 						{
@@ -162,6 +162,7 @@ public class createSlotMachine
 						}
 				}
 			}
+			
 //			for (int r = 0; r < 3; r++)
 //				{
 //				for (int c = 0; c < 3; c++)
