@@ -2,6 +2,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 public class createSlotMachine
 	{
+		public static ArrayList <String> blankSpace = new ArrayList <String> ( );
 		public static String [][] machineName = new String[3][3];
 		public static int [][] machineValue = new int [3][3];
 		public static int payout;
@@ -10,25 +11,38 @@ public class createSlotMachine
 		public static void main(String[] args)
 			{
 			all = true;
+			createBlankSpace();
 			addSymbols();
 			pullLever();
 			determineProfit();
 			}
 
+		private static void createBlankSpace()
+			{
+				blankSpace.add("     ");
+				blankSpace.add("     ");
+				blankSpace.add("     ");
+				blankSpace.add("     ");
+				blankSpace.add("     ");
+				blankSpace.add("     ");
+				blankSpace.add("     ");
+				
+			}
+
 		public static void addSymbols()
 			{
 			
-				symbols.add(new Symbol("cherry", 60, 22.5, false, 1));
-				symbols.add(new Symbol("orange", 25, 40.0, false, 1));
-				symbols.add(new Symbol("banana", 185, 12.0, false, 1));
-				symbols.add(new Symbol("dog", 500, 5.0, false, 1));
-				symbols.add(new Symbol("cat", 1750, 2.5, false, 1));
+				symbols.add(new Symbol("zesty", 60, 22.5, false, 1));
+				symbols.add(new Symbol("world", 25, 40.0, false, 1));
+				symbols.add(new Symbol("yucky", 185, 12.0, false, 1));
+				symbols.add(new Symbol("zippy", 500, 5.0, false, 1));
+				symbols.add(new Symbol("wrath", 1750, 2.5, false, 1));
 				symbols.add(new Symbol("frodo", 12000, 1.0, false, 1));
-				symbols.add(new Symbol("mac n' cheese", 25000, .5, false, 1));
-				symbols.add(new Symbol("boomerang", 750, 1.5, false, 1));
-				symbols.add(new Symbol("flag", 125, 12.5, false, 1));
+				symbols.add(new Symbol("youth", 25000, .5, false, 1));
+				symbols.add(new Symbol("vowel", 750, 1.5, false, 1));
+				symbols.add(new Symbol("urban", 125, 12.5, false, 1));
 				symbols.add(new Symbol("aglet", 50000, .1, false, 1));
-				symbols.add(new Symbol("aircraft carrier", 350, 2.6, false, 1));
+				symbols.add(new Symbol("vegie", 350, 2.6, false, 1));
 				
 			}
 		
@@ -41,17 +55,23 @@ public class createSlotMachine
 					{
 						TimeUnit.SECONDS.sleep(1);
 					} 
-				catch (InterruptedException e)
+				catch (InterruptedException e)          
 					{
 						e.printStackTrace();
 					}
 				System.out.print(". ");
 				}
 			System.out.println("");
-			System.out.println("Here is the slot machine: ");
-			for (int lo = 0; lo < 22; lo++)
+			System.out.println();
+			System.out.println("			Here is the slot machine: \n");
+			for (int lo = 0; lo < 25; lo++)
 			{
-			System.out.print("=");
+				if(lo == 0 ){
+					System.out.print("			=");
+				}
+				else{
+					System.out.print("=");
+				}
 			}
 			System.out.println("");
 			payout = 0;
@@ -117,24 +137,60 @@ public class createSlotMachine
 							}
 					}
 				}
-			for (int r = 0; r < 3; r++)
-				{
-				for (int c = 0; c < 3; c++)
-					{
-						System.out.print(machineName[r][c] + " | ");
-					}
-				System.out.println("");
-				System.out.print("=");
-				for (int l = 0; l < 19; l++)
-					{
-					System.out.print("=");
-					}
-				System.out.println("");
+			for(int r = 0; r < 8 ; r++){
+				if(r % 2 == 0){
+					for (int l = 0; l < 25; l++)
+						{
+							if(l == 0){
+								System.out.print("			=");
+							}
+							else{
+								System.out.print("=");
+							}
 				}
+				}
+				else{
+					for (int c = 0; c < 3; c++)
+						{
+							if(c == 0){
+								System.out.print("			| " + blankSpace.get(c) + " | ");
+							}
+							else{
+								System.out.print(machineName[r][c] + " | ");
+							}
+							
+						}
+				}
+			}
+//			for (int r = 0; r < 3; r++)
+//				{
+//				for (int c = 0; c < 3; c++)
+//					{
+//						if(c == 0){
+//							System.out.print("			| " + machineName[r][c] + " | ");
+//						}
+//						else{
+//							System.out.print(machineName[r][c] + " | ");
+//						}
+//						
+//					}
+//				System.out.println("");
+//				for (int l = 0; l < 25; l++)
+//					{
+//						if(l == 0){
+//							System.out.print("			=");
+//						}
+//						else{
+//							System.out.print("=");
+//						}
+//					}
+//				System.out.println("");
+//				}
 			}
 		
 		public static void determineProfit()
 			{
+				System.out.println();
 			if(middle)
 				{
 				if (machineName[1][0].equals(machineName[1][1]) && machineName[1][0].equals(machineName[1][2]))

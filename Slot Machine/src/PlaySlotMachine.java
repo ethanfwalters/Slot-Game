@@ -21,19 +21,22 @@ public class PlaySlotMachine
 			Scanner userName = new Scanner(System.in);
 			System.out.println("What is your name?");
 			name = userName.nextLine();
-			System.out.println("Welcome, " + name + ", to the Incredibly Unfair Slot Machine! You have 500 tokens to spend.");
-			tokens = 200;
+			System.out.println("\nWelcome, " + name + ", to the Incredibly Unfair Slot Machine! You have 500 tokens to spend.");
+			tokens = 500;
 			gameContinues = true;
 			System.out.println("It costs 3 tokens to bet on the middle row, 5 tokens to bet on the outside rows, or 7 tokens to bet on all three rows AND diagonals.");
+			
 			}
 		private static void takeTokens()
 			{
+			System.out.println();
 			System.out.println("How much do you want to bet?");
 			System.out.println("1: Bet 3 tokens.");
 			System.out.println("2: Bet 5 tokens.");
 			System.out.println("3: Bet 7 tokens.");
 			Scanner userBet = new Scanner(System.in);
 			choice = userBet.nextInt();
+			System.out.println();
 			if (tokens > 0)
 				{
 					switch (choice)
