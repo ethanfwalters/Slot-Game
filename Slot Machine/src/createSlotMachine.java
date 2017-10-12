@@ -47,18 +47,18 @@ public class createSlotMachine
 		public static void pullLever()
 			{
 			System.out.print("Spinning");
-//			for (int dot = 0; dot < 5; dot++)
-//				{
-//				try
-//					{
-//						TimeUnit.SECONDS.sleep(1);
-//					} 
-//				catch (InterruptedException e)          
-//					{
-//						e.printStackTrace();
-//					}
-//				System.out.print(". ");
-//				}
+			for (int dot = 0; dot < 5; dot++)
+				{
+				try
+					{
+						TimeUnit.SECONDS.sleep(1);
+					} 
+				catch (InterruptedException e)          
+					{
+						e.printStackTrace();
+					}
+				System.out.print(". ");
+				}
 			System.out.println("");
 			System.out.println();
 			System.out.println("			Here is the slot machine: ");
@@ -137,67 +137,67 @@ public class createSlotMachine
 				}
 			System.out.println();
 		
-			for(int r = 0; r < 3 ; r++){
-				for(int c = 0 ; c < 3 ; c++){
-					if(c ==0){
-						System.out.print("			| " + blankSpace[r][c] + " | ");
-					}
-					else{
-						System.out.print(blankSpace[r][c] + " | ");
-					}
-				}
-				System.out.println();
-				for (int lo = 0; lo < 25; lo++)
-					{
-						if(lo == 0 ){
-							System.out.print("			=");
-						}
-						else{
-							System.out.print("=");
-						}
-					}
-				System.out.println();
-			}
-			
-			
-			for (int r = 0; r < 3; r++)
-			{
-			for (int c = 0; c < 3; c++)
-				{
-					blankSpace[r][c] = machineName[r][c];
-					System.out.println();
-				}
-			}
-			
-			}
-		
-			//for(int l = 0 ; l < 10)
-			
-//			for (int r = 0; r < 3; r++)
-//				{
-//				for (int c = 0; c < 3; c++)
-//					{
-//						if(c == 0){
-//							System.out.print("			| " + machineName[r][c] + " | ");
-//						}
-//						else{
-//							System.out.print(machineName[r][c] + " | ");
-//						}
-//						
+//			for(int r = 0; r < 3 ; r++){
+//				for(int c = 0 ; c < 3 ; c++){
+//					if(c ==0){
+//						System.out.print("			| " + blankSpace[r][c] + " | ");
 //					}
-//				System.out.println("");
-//				for (int l = 0; l < 25; l++)
+//					else{
+//						System.out.print(blankSpace[r][c] + " | ");
+//					}
+//				}
+//				System.out.println();
+//				for (int lo = 0; lo < 25; lo++)
 //					{
-//						if(l == 0){
+//						if(lo == 0 ){
 //							System.out.print("			=");
 //						}
 //						else{
 //							System.out.print("=");
 //						}
 //					}
-//				System.out.println("");
+//				System.out.println();
+//			}
+//			
+//			
+//			for (int r = 0; r < 3; r++)
+//			{
+//			for (int c = 0; c < 3; c++)
+//				{
+//					blankSpace[r][c] = machineName[r][c];
+//					System.out.println();
 //				}
 //			}
+//			
+//			}
+		
+			//for(int l = 0 ; l < 10)
+			
+			for (int r = 0; r < 3; r++)
+				{
+				for (int c = 0; c < 3; c++)
+					{
+						if(c == 0){
+							System.out.print("			| " + machineName[r][c] + " | ");
+						}
+						else{
+							System.out.print(machineName[r][c] + " | ");
+						}
+						
+					}
+				System.out.println("");
+				for (int l = 0; l < 25; l++)
+					{
+						if(l == 0){
+							System.out.print("			=");
+						}
+						else{
+							System.out.print("=");
+						}
+					}
+				System.out.println("");
+				}
+			}
 		
 		public static void determineProfit()
 			{

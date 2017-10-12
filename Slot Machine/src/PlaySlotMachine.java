@@ -2,6 +2,7 @@ import java.util.*;
 public class PlaySlotMachine
 	{
 		public static int tokens, choice;
+		public static int numberOfPlays = 1;
 		static String name;
 		static boolean gameContinues;
 		public static void main(String[] args)
@@ -34,10 +35,17 @@ public class PlaySlotMachine
 			System.out.println("1: Bet 3 tokens.");
 			System.out.println("2: Bet 5 tokens.");
 			System.out.println("3: Bet 7 tokens.");
+			if(numberOfPlays > 0){
+				
+			}
 			Scanner userBet = new Scanner(System.in);
 			choice = userBet.nextInt();
 			System.out.println();
-			if (tokens > 0)
+			if (tokens > 0){
+				for(int i = 0 ; i < 50 ; i++){
+					System.out.println();
+				}
+			}
 				{
 					switch (choice)
 					{
@@ -87,7 +95,12 @@ public class PlaySlotMachine
 				{
 					case 1:
 							{
+							for(int i = 0 ; i < 300 ; i++){
+								System.out.println();
+							}
+									
 							gameContinues = true;
+							
 							break;
 							}
 					case 2:
